@@ -12,16 +12,4 @@ public class OpportunityCalloutManager {
         system.debug(response.getBody());
     }
 
-    
-    public static void DeleteOpportunityByName(String Name){
-        
-        Http http = new Http();
-        HttpRequest request = new HttpRequest();
-        request.setMethod('DELETE');
-        request.setEndPoint(END_POINT) ;
-        request.setHeader('Content-Type', 'application/json; charset=utf-8'); 
-        request.setBody('{"": ""}');
-        HttpResponse response = http.send(request);
-        system.debug(response.getBody());
-    }
 }

@@ -1,0 +1,16 @@
+public class ContactCalloutManager {
+		public static final string END_POINT ='callout:OrgAToOrgBNamed/services/apexrest/opportunities/';    
+   
+    
+    public static void DeleteContactByName(String Name){
+        
+        Http http = new Http();
+        HttpRequest request = new HttpRequest();
+        request.setMethod('DELETE');
+        request.setEndPoint(END_POINT) ;
+        request.setHeader('Content-Type', 'application/json; charset=utf-8'); 
+        request.setBody('{"Name": "'+Name+'"}');
+        HttpResponse response = http.send(request);
+        system.debug(response.getBody());
+    }
+}
