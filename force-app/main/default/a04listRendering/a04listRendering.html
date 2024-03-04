@@ -1,0 +1,70 @@
+<template>
+    
+
+<lightning-card title="List Rendering SEHIRLER FOR:EACH yontemi">
+
+<p>sehirler >>> {sehirler}</p>
+
+
+<template for:each={sehirler} for:item="shr">
+
+
+<p  key={shr}   >  Sehir >>>>   {shr}    </p>
+
+
+</template>
+
+</lightning-card>
+
+<lightning-card title=" List Rendering SEHIRLER ITERATION yontemi">
+
+ <template iterator:it={sehirler} >
+    <p   key={it.value}  if:true={it.first}     > ILK SATIR  </p>
+
+ <p  key={it.value} > SHR >>   {it.value}    </p>
+
+ <p   key={it.value}  if:true={it.last}     > SON SATIR  </p>
+
+ </template>
+
+
+
+</lightning-card>
+
+<br>
+
+
+
+<lightning-card  title="Cicek Listesi For:Each Loop">
+
+
+<template  for:each={cicekListesi} for:item="cicek">
+
+<div  key={cicek.id}  >
+    <p >  cicek adi >>>>   {cicek.name}    </p>
+    <p >  cicek adi >>>>   {cicek.familya}    </p>
+    
+    <img src={cicek.imgUrl} alt={cicek.name} width="200" height="250">   
+    <p >  <br>  </p> 
+</div>
+    
+
+</template>
+
+
+
+
+</lightning-card>
+
+
+
+
+
+
+
+
+
+
+
+
+</template>

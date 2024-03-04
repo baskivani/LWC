@@ -1,10 +1,79 @@
 <template>
+ 
+  
+<lightning-card  title="Data Binding TEK YON">
+    
+    <h1> Benim Adim RESUL </h1>
+    <h1> Benim Adim 2 {isim} </h1>
    
-    <lightning-card  title="Data Binding">
-      
-        <h1> Mein Name ist {isim}</h1>
-   <h1> Kisinin ismi {kisi.ismi}</h1> <br>
-   <h1> Kisinin ismi {kisi.yasi}</h1>   <br>
-   <h1> Kisinin ismi {kisi.oyunlar}</h1> <br>
-    </lightning-card>
+<br><br>
+<h1> KISININ ISMI {kisi}      </h1>
+<h1> kisinin ismi {kisi.ismi}      </h1>
+<h1> kisinin yas {kisi.yas}      </h1>
+<h1> kisinin oyunlar {kisi.oyunlar}      </h1>
+
+<!--   <h1>kisinin oyunlar tavla:: {kisi.oyunlar[0]}   </h1>
+
+    yukaridaki kod calismaz   oyunlar[0]  daki  [0]  yapilamaz
+-->
+
+
+
+</lightning-card>
+
+<br>
+
+<lightning-card title="Data Binding Cift Yonlu ">
+
+    <lightning-input 
+        type="text" 
+        label="Adinizi Giriniz"
+        onchange={handleChange}
+         ></lightning-input>
+
+<h1> benim adim >>> {ad}</h1>
+
+</lightning-card>
+
+
+<lightning-card title="Data manuple ">
+
+    <lightning-input 
+    type="text" 
+    label="Adinizi Giriniz"
+    onchange={handleIlkIsim}
+     ></lightning-input>
+
+<h1> benim adim >>> {ilkIsim}</h1>
+
+</lightning-card>
+<br>
+
+<lightning-card title="Data manuple get methodu 2">
+
+    <lightning-input 
+    type="text" 
+    label="Adinizi Giriniz"
+    onchange={handleIlkIsimGet}
+     ></lightning-input>
+
+
+     <lightning-input 
+    type="text" 
+    label="Soyadinizi Giriniz"
+    onchange={handleSoyadGet}
+     ></lightning-input>
+
+
+<h1> benim adim >>> {getIlkIsim}</h1>
+
+</lightning-card>
+
+
+
+
+
+
+
+
 </template>

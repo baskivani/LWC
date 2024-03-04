@@ -1,0 +1,96 @@
+<template>
+    
+<lightning-card title="Conditional Rendering ESKI ">
+
+
+    <template if:true={sart1}>
+
+   <h1>********* SART BIR TRUE *********</h1>
+    </template>
+
+
+    <template if:false={sart2}>
+
+        <h1> bak sart 2 TRUE oldu simdi</h1>
+
+    </template>
+
+</lightning-card>
+<br> 
+<lightning-card title="Conditional Rendering Tezahurat ">
+
+   
+
+<br>
+
+    <template if:true={flag}>
+
+   <h1>********* SARI  *********</h1>
+    </template>
+
+
+    <template if:false={flag}>
+
+        <h1> ****** KIRMIZI ****** </h1>
+
+    </template>
+<br>
+    <lightning-button 
+    variant="brand" 
+    label="Sari / Kirmizi" 
+    title="Primary action" 
+    onclick={handleClick} 
+    class="slds-m-left_x-small"></lightning-button>
+</lightning-card>
+
+
+<lightning-card title="Parola Sorgula 2">
+
+    <lightning-input 
+    type="text" 
+    label="Parola  Giriniz"
+    onchange={handleChange}
+     ></lightning-input>
+
+
+     <div if:true={flag2}>
+
+        <h1>********* parola dogru  *********</h1>
+     </div>
+     
+     
+         <template if:false={flag2}>
+     
+             <h1> bir daha deneyiniz </h1>
+     
+         </template>
+
+
+</lightning-card>
+
+
+
+
+<lightning-card title="** Conditional Rendering YENI ">
+
+    <div lwc:if={durum1}>
+        Statement 1: merhaba
+    </div>
+    <template lwc:elseif={durum2}>
+        Statement 2 :nasilsin
+    </template>
+    <template lwc:elseif={durum3}>
+        Statement 3 : noruyon
+    </template>
+    <template lwc:else>
+        Statement last : SELAM
+    </template>
+
+</lightning-card>
+
+
+
+
+
+
+</template>
